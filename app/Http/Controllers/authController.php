@@ -34,7 +34,19 @@ class authController extends Controller
         if(Auth::attempt($credentials)){
              return redirect()->route('dashboard');
         }
+        else{
+            print_r("error");
+        }
 
+    }
+
+    public function dashboard(){
+        if(Auth::check()){
+            return view('dashboard');
+        }
+        else{
+            return redirect()->route('login');
+        }
     }
 
     public function logout(){

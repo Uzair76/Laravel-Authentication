@@ -10,7 +10,7 @@
 <body>
     <h1>wellcome {{Auth::user()->name}}</h1>
 
-    <button>inner</button>
+    <button style="color: blue"><a href="{{route('innerpage')}}">Go to inner page</a></button>
     <button><a href="{{ route ('user.logout')}}">logout</a></button>
 
 </body>
